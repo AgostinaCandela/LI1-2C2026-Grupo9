@@ -1,0 +1,67 @@
+/* Variables */
+:root {
+    --color-fondo: #F8F7F1;
+    --color-header: #075548;
+    --color-footer: #08b89d;
+    --color-texto-principal: #123D36;
+    --color-texto: #ffffff;
+    --color-acento: #D9A441;
+    --color-hover: #f8a100;
+    --fuente-pricipal: "Oswald", sans-serif;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    font-family: var(--fuente-pricipal);
+    font-size: 18px;
+    line-height: 1.8;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 1rem;
+}
+
+/* Header */
+header {
+    background-color: var(--color-header);
+    color: var(--color-texto);
+    padding: 1.5rem;
+    margin: 14px;
+}
+
+/* Navegacion */
+nav a {
+    text-decoration: none;
+    color: var(--color-acento);
+}
+nav a:hover {
+    color: var(--color-hover);
+}
+
+/* Main */
+main {
+    padding: 1.5rem;
+    margin: 14px;
+}
+
+/* Section */
+section {
+    padding: 1.5rem;
+    margin: 14px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-footer);
+    color: var(--color-texto);
+    padding: 1rem;
+    margin: 14px;
+}
