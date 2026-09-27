@@ -33,7 +33,7 @@ body {
 /* Header */
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     background-color: var(--color-header);
     color: var(--color-texto-secundario);
