@@ -27,7 +27,7 @@ body {
     color: var(--color-texto-principal);
     max-width: 1100px; 
     margin: auto;
-    padding: 0.5 rem;
+    padding: 0.5rem;
 }
 
 /* Header */
@@ -102,8 +102,12 @@ main {
 
 /* Section */
 section {
-    padding: 1.5rem;
-    margin: 14px;
+    bacground-color: #ffffff;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    border-radius: 7px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    border-left: 5px solid var(--color-header);
 }
 
 /* Footer */
