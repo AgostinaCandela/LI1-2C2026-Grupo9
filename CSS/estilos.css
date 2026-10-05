@@ -64,7 +64,7 @@ header div h1 {
   padding: 0;
 }
 
-/* Navegacion */
+/* Nav y footer */
 
 nav {
     display: flex;
@@ -76,23 +76,33 @@ nav {
     width: max-content;
 }
 
-nav a {
+nav a, footer a {
     text-decoration: none;
     color: var(--color-acento);
     font-family: var(--fuente-secundaria);
+    font-weight: 700;
     padding: 10px ;
     display: inline-block;
     transition: transform 0.3s ease, color 0.3s ease;
 }
-nav a:hover {
+
+nav a:hover, footer a:hover {
     color: var(--color-hover);
     transform: translateY(-3px);
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-footer);
+    color: var(--color-texto-secundario);
+    padding: 1rem;
+    margin: 14px;
+}
+
 /* Elementos del menú */
-nav ul {
+nav ul, footer ul {
   display: flex;
-  justify-content: flex-start;
   gap: 10px;
   list-style: none;
   margin: 0;
@@ -109,6 +119,7 @@ main {
 section {
     background-color: var(--color-texto-secundario);
     padding: 1.8rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
     border-radius: 7px;
     box-shadow: 0 3px 8px var(--color-sombra);
@@ -129,13 +140,7 @@ section h3 {
     margin-top: 1rem;
     margin-bottom: 0.7rem;
 }
-article h2 {
-    font-family: var(--fuente-principal);
-    color: var(--color-header);
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 0.7rem;
-}
+
 section p {
     font-family: var(--fuente-secundaria);
     color: var(--color-texto-principal);
@@ -151,14 +156,7 @@ section strong {
 section em{
     font-style: italic;
 }
-article {
-    background-color: var(--color-fondo);
-    padding: 1.2rem;
-    margin-top: 1.1rem;
-    margin-bottom: 1.1rem;
-    border-radius: 6px;
-    border: 1px solid var(--color-borde-tarjeta);
-}
+
 section div {
     background-color: var(--color-fondo);
     padding: 1.2rem;
@@ -167,19 +165,7 @@ section div {
     border-radius: 6px;
     border: 1px solid var(--color-borde-tarjeta);
 }
-article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin: 0.8rem 0;
-    box-shadow: 0 2px 6px var(--color-sombra);
-}
-hr {
-    border: 0;
-    height: 1px;
-    background-color: var(--color-borde-tarjeta);
-    margin: 2rem 0;
-}
+
 section ul {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
@@ -195,6 +181,35 @@ section li p {
     margin-top: 0.2rem;
     margin-bottom: 0.4rem;
 }
+
+.lugar{
+    background-color: var(--color-fondo);
+    padding: 1.2rem;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-borde-tarjeta);
+}
+
+#información ul {
+    list-style: none;
+}
+
+/* mark */
+
+#importante {
+    background-color:#fbe392;
+}
+
+/* hr y dl */
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--color-borde-tarjeta);
+    margin: 2rem 0;
+}
+
 dl {
     display: grid;
     grid-template-columns: auto 3fr;
@@ -215,35 +230,22 @@ dd {
     color: var(--color-texto-principal);
 }
 
-/* Footer */
-footer {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-footer);
-    color: var(--color-texto-secundario);
-    padding: 1rem;
-    margin: 14px;
+/* Artículo */
+article {
+    background-color: var(--color-fondo);
+    padding: 1.2rem;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-borde-tarjeta);
 }
 
-footer a {
-    text-decoration: none;
-    color: var(--color-texto-secundario);
-    font-family: var(--fuente-secundaria);
-    padding: 10px;
-}
-
-footer a:hover {
-    color: var(--color-hover);
-    text-decoration: underline;
-}
-
-footer ul {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+article h2 {
+    font-family: var(--fuente-principal);
+    color: var(--color-header);
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 0.7rem;
 }
 
 /* Selectores */
@@ -256,8 +258,8 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    margin-bottom: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transition:transform 0.3s ease;
 }
 
@@ -265,14 +267,15 @@ img:hover {
     transform:scale(1.05);
     cursor: pointer;
 }
+
     /*tabla */
 table {
     width: 100%;
     border-collapse:collapse;
-    margin: 20px 0;
-    border-radius:8px;
-    overflow:hidden ;
-    box-shadow:0 2px 8px rgba(0, 0, 0, 0.3)
+    margin: 18px 0;
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 th, td {
@@ -285,11 +288,6 @@ th, td {
 thead {
     background-color:var(--color-header);
     color:white;
-}
-
-thead {
-    background-color: var(--color-header);
-    color:white
 }
 
 tbody tr:nth-child(even) {
