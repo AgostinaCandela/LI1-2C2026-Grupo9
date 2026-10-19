@@ -7,8 +7,8 @@
     --color-texto-secundario: #ffffff;
     --color-acento: #fdd759;
     --color-hover: #ff9100;
-    --fuente-principal: "Fjalla One", Arial, sans-serif;
-    --fuente-secundaria: "Lato", sans-serif;
+    --fuente-titulos: "Fjalla One", Arial, sans-serif;
+    --fuente-principal: "Lato", Arial, sans-serif;
     --color-sombra: rgba(0, 0, 0, 0.05);
     --color-borde-tarjeta: rgba(7, 90 ,70 , 0.2);
 }
@@ -16,13 +16,13 @@
 /* Reset */
 * {
     box-sizing: border-box;
-    margin: auto;
-    padding: auto;
+    margin: 0;
+    padding: 0;
 }
 
 /* Body */
 body {
-    font-family: var(--fuente-secundaria);
+    font-family: var(--fuente-principal);
     font-size: 18px;
     line-height: 1.7;
     background-color: var(--color-fondo);
@@ -79,7 +79,7 @@ nav {
 nav a, footer a {
     text-decoration: none;
     color: var(--color-acento);
-    font-family: var(--fuente-secundaria);
+    font-family: var(--fuente-principal);
     font-weight: 700;
     padding: 10px ;
     display: inline-block;
@@ -105,8 +105,6 @@ nav ul, footer ul {
   display: flex;
   gap: 10px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 /* Main */
@@ -126,7 +124,6 @@ section {
     border-left: 5px solid var(--color-header);
 }
 section h2 {
-    font-family: var(--fuente-principal);
     color: var(--color-header);
     font-size: 1.8rem;
     margin-bottom: 1rem;
@@ -134,7 +131,6 @@ section h2 {
     border-bottom: 2px solid var(--color-acento);
 }
 section h3 {
-    font-family: var(--fuente-principal);
     color: var(--color-texto-principal);
     font-size: 1.5rem;
     margin-top: 1rem;
@@ -241,7 +237,6 @@ article {
 }
 
 article h2 {
-    font-family: var(--fuente-principal);
     color: var(--color-header);
     font-size: 1.8rem;
     margin-top: 1rem;
@@ -249,10 +244,15 @@ article h2 {
 }
 
 /* Selectores */
-h1, h2, h3, h4 {
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+}
+
+h4 {
     font-family: var(--fuente-principal);
 }
-    /*Integrante 4 */
+
+/* Imagenes */
 
 img {
     max-width: 100%;
@@ -268,7 +268,8 @@ img:hover {
     cursor: pointer;
 }
 
-    /*tabla */
+/* Tabla */
+
 table {
     width: 100%;
     border-collapse:collapse;
