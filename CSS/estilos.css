@@ -21,6 +21,18 @@
     max-width: 100%;
 }
 
+
+/* Class del modo oscuro */
+.header-footer-oscuro {
+    background-color: #181818;
+}
+.body-oscuro {
+    background-color: #000000;
+}
+.main-modo-oscuro {
+    background-color: #181818;
+}
+
 /* Body */
 body {
     font-family: var(--fuente-principal);
@@ -63,6 +75,23 @@ header div {
 header div h1 {
     margin: 0;
     padding: 0;
+}
+
+/* Boton de modo oscuro/claro */
+
+header button {
+    background-color: #ff9100;
+    color: black;
+    border: 4px solid black;
+    margin-left: 140px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+}
+
+header button:hover {
+    background-color: #4d998a;
 }
 
 /* Nav y footer */

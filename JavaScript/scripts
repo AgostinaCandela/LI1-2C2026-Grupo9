@@ -1,0 +1,23 @@
+//========================================//
+//  Boton para poner modo oscuro/normal   //
+//========================================//
+const headerModoOscuro = document.getElementById("Inicio");
+const footerModoOscuro = document.getElementById("Final");
+const bodyModoOscuro = document.querySelector("body");
+const SobreLaCiudadModoOscuro = document.getElementById("SobreLaCiudad");
+const lugaresDeInteresModoOscuro = document.getElementById("LugaresDeInteres");
+const EventosDestacadosModoOscuro = document.getElementById("EventosDestacados");
+const CascoHistóricoModoOscuro = document.getElementById("CascoHistórico");
+const CulturaGastronomíaYEventosModoOscuro = document.getElementById("CulturaGastronomíaYEventos");
+const btnCambio = document.getElementById("btn-cambio");
+
+btnCambio.addEventListener("click", () => {
+    headerModoOscuro.className = "header-footer-oscuro";
+    footerModoOscuro.className = "header-footer-oscuro";
+    bodyModoOscuro.className = "body-oscuro";
+    SobreLaCiudadModoOscuro.className = "main-modo-oscuro";
+    lugaresDeInteresModoOscuro.className = "main-modo-oscuro";
+    EventosDestacadosModoOscuro.className = "main-modo-oscuro";
+    CascoHistóricoModoOscuro.className = "main-modo-oscuro";
+    CulturaGastronomíaYEventosModoOscuro.className = "main-modo-oscuro";
+});
