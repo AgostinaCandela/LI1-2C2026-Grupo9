@@ -11,6 +11,10 @@
     --fuente-principal: "Lato", Arial, sans-serif;
     --color-sombra: rgba(0, 0, 0, 0.05);
     --color-borde-tarjeta: rgba(7, 90, 70, 0.2);
+    --color-fondo-modo-oscuro: #121E1C;
+    --color-letra-modo-oscuro:#EAF5F2;
+    --color-fondo-modo-claro:#f0f3f3;
+    --color-letra-modo-claro:#123D36;
 }
 
 /* Reset */
