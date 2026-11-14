@@ -36,7 +36,7 @@
 /* Body */
 body {
     font-family: var(--fuente-principal);
-    font-size: 18px;
+    font-size: 1.2rem;
     line-height: 1.7;
     background-color: var(--color-fondo);
     color: var(--color-texto-principal);
@@ -378,6 +378,19 @@ form button:hover {
     background-color: #4d998a
 }
 
+/* Formulario mensaje*/
+
+.mensaje {
+    font-size: 1.2rem;
+    color: var(--color-header);
+    margin-top: 10px;
+}
+
+.mensaje-error {
+    color: red;
+}
+
+/* Card lugares de interés */
 .card {
     background-color: var(--color-texto-secundario);
     border: 1px solid var(--color-borde-tarjeta);
@@ -394,8 +407,7 @@ form button:hover {
     font-family: var(--fuente-principal);
 }
 
-/*
-    Integrante 3 - Flexbox Lugares */
+/* Flexbox Lugares */
 
 .lugares-flex {
     display:flex;
