@@ -11,10 +11,73 @@
     --fuente-principal: "Lato", Arial, sans-serif;
     --color-sombra: rgba(0, 0, 0, 0.05);
     --color-borde-tarjeta: rgba(7, 90, 70, 0.2);
+
+    --color-tabla-par-oscuro: #1a2b28;
+    --color-tabla-hover-oscuro: #253d38;
+    --color-borde-oscuro: #2a403c;
     --color-fondo-modo-oscuro: #121E1C;
-    --color-letra-modo-oscuro:#EAF5F2;
-    --color-fondo-modo-claro:#f0f3f3;
-    --color-letra-modo-claro:#123D36;
+    --color-letra-modo-oscuro: #EAF5F2;
+    --color-fondo-modo-claro: #f0f3f3;
+    --color-letra-modo-claro: #123D36;
+}
+
+/* Estilos Modo Oscuro */
+body.body-oscuro {
+    background-color: var(--color-fondo-modo-oscuro);
+    color: var(--color-letra-modo-oscuro);
+}
+
+/*Encabezado, pie de página, secciones y tarjetas en modo oscuro*/
+body.body-oscuro header,
+body.body-oscuro footer,
+body.body-oscuro section,
+body.body-oscuro .card {
+    background-color: var(--color-fondo-modo-oscuro);
+    color: var(--color-letra-modo-oscuro);
+}
+
+/*Textos y titulos en modo oscuro*/
+body.body-oscuro h1,
+body.body-oscuro h2,
+body.body-oscuro h3,
+body.body-oscuro p,
+body.body-oscuro li,
+body.body-oscuro dt,
+body.body-oscuro dd,
+body.body-oscuro .card-title,
+body.body-oscuro .card-text {
+    color: var(--color-letra-modo-oscuro);
+}
+
+body.body-oscuro table {
+    background-color: var(--color-fondo-modo-oscuro);
+    border-color: var(--color-borde-oscuro);
+}
+
+body.body-oscuro th {
+    border-color: var(--color-borde-oscuro);
+    color: var(--color-letra-modo-oscuro);
+}
+
+body.body-oscuro td {
+    border-color: var(--color-borde-oscuro);
+    color: var(--color-letra-modo-oscuro);
+}
+
+body.body-oscuro tbody tr:nth-child(even) {
+    background-color: var(--color-tabla-par-oscuro);
+}
+
+body.body-oscuro tbody tr:nth-child(odd) {
+    background-color: var(--color-fondo-modo-oscuro);
+}
+
+body.body-oscuro tbody tr:hover {
+    background-color: var(--color-tabla-hover-oscuro);
+}
+
+body.body-oscuro img {
+    box-shadow: 0 4px 10px var(--color-sombra);
 }
 
 /* Reset */
@@ -30,9 +93,11 @@
 .header-footer-oscuro {
     background-color: #181818;
 }
+
 .body-oscuro {
     background-color: #000000;
 }
+
 .main-modo-oscuro {
     background-color: #181818;
 }
@@ -214,7 +279,8 @@ section li p {
     margin-bottom: 0.4rem;
 }
 
-.tarjeta, .lugar {
+.tarjeta,
+.lugar {
     background-color: var(--color-fondo);
     padding: 1.2rem;
     margin-top: 1.1rem;
@@ -282,7 +348,9 @@ article h2 {
 }
 
 /* Titulo y subtitulos */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--fuente-titulos);
 }
 
@@ -414,31 +482,30 @@ form button:hover {
 /* Flexbox Lugares */
 
 .lugares-flex {
-    display:flex;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
-    padding:20px;
-    list-style:none;
+    padding: 20px;
+    list-style: none;
 }
 
 .lugar {
     flex: 1 1 400px;
     max-width: 100%;
-    background:white;
-    border-radius:12px;
-    padding:20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    display:flex;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
     flex-direction: column;
-    gap:12px;
+    gap: 12px;
 }
 
-.lugar img{
-    width:100%;
-    height:200px;
+.lugar img {
+    width: 100%;
+    height: 200px;
     object-fit: cover;
-    border-radius:8px;
-    position:relative;
+    border-radius: 8px;
+    position: relative;
 }
-
