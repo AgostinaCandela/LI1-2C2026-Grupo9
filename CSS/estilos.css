@@ -12,72 +12,15 @@
     --color-sombra: rgba(0, 0, 0, 0.05);
     --color-borde-tarjeta: rgba(7, 90, 70, 0.2);
 
-    --color-tabla-par-oscuro: #1a2b28;
-    --color-tabla-hover-oscuro: #253d38;
-    --color-borde-oscuro: #2a403c;
+    --color-tabla-par-oscuro: #002e26;
+    --color-tabla-hover-oscuro: #023f33;
+    --color-footer-oscuro: #09493d;
+    --color-header-oscuro: #063f34;
+    --color-section-oscuro: #06352d;
     --color-fondo-modo-oscuro: #121E1C;
-    --color-letra-modo-oscuro: #EAF5F2;
+    --color-letra-modo-oscuro: #ffffff;
     --color-fondo-modo-claro: #f0f3f3;
-    --color-letra-modo-claro: #123D36;
-}
-
-/* Estilos Modo Oscuro */
-body.body-oscuro {
-    background-color: var(--color-fondo-modo-oscuro);
-    color: var(--color-letra-modo-oscuro);
-}
-
-/*Encabezado, pie de página, secciones y tarjetas en modo oscuro*/
-body.body-oscuro header,
-body.body-oscuro footer,
-body.body-oscuro section,
-body.body-oscuro .card {
-    background-color: var(--color-fondo-modo-oscuro);
-    color: var(--color-letra-modo-oscuro);
-}
-
-/*Textos y titulos en modo oscuro*/
-body.body-oscuro h1,
-body.body-oscuro h2,
-body.body-oscuro h3,
-body.body-oscuro p,
-body.body-oscuro li,
-body.body-oscuro dt,
-body.body-oscuro dd,
-body.body-oscuro .card-title,
-body.body-oscuro .card-text {
-    color: var(--color-letra-modo-oscuro);
-}
-
-body.body-oscuro table {
-    background-color: var(--color-fondo-modo-oscuro);
-    border-color: var(--color-borde-oscuro);
-}
-
-body.body-oscuro th {
-    border-color: var(--color-borde-oscuro);
-    color: var(--color-letra-modo-oscuro);
-}
-
-body.body-oscuro td {
-    border-color: var(--color-borde-oscuro);
-    color: var(--color-letra-modo-oscuro);
-}
-
-body.body-oscuro tbody tr:nth-child(even) {
-    background-color: var(--color-tabla-par-oscuro);
-}
-
-body.body-oscuro tbody tr:nth-child(odd) {
-    background-color: var(--color-fondo-modo-oscuro);
-}
-
-body.body-oscuro tbody tr:hover {
-    background-color: var(--color-tabla-hover-oscuro);
-}
-
-body.body-oscuro img {
-    box-shadow: 0 4px 10px var(--color-sombra);
+    --color-card-modo-oscuro: #0b4238;
 }
 
 /* Reset */
@@ -86,20 +29,6 @@ body.body-oscuro img {
     margin: 0;
     padding: 0;
     max-width: 100%;
-}
-
-
-/* Class del modo oscuro */
-.header-footer-oscuro {
-    background-color: #181818;
-}
-
-.body-oscuro {
-    background-color: #000000;
-}
-
-.main-modo-oscuro {
-    background-color: #181818;
 }
 
 /* Body */
@@ -113,6 +42,91 @@ body {
     margin: auto;
     padding: 0.5rem;
 }
+
+
+/* Body Modo Oscuro */
+.body-oscuro {
+    background-color: var(--color-fondo-modo-oscuro);
+    color: var(--color-letra-modo-oscuro);
+}
+
+/* Header, footer y section en Modo oscuro*/
+.body-oscuro header{
+    background-color: var(--color-header-oscuro);
+}
+.body-oscuro section {
+    background-color: var(--color-section-oscuro);
+    color: var(--color-letra-modo-oscuro);
+    border-left: 5px solid var(--color-acento);
+}
+.body-oscuro footer {
+    background-color: var(--color-footer-oscuro);
+}
+
+/*Titulos en Modo oscuro*/
+
+.body-oscuro h1,
+.body-oscuro h2,
+.body-oscuro h3,
+.body-oscuro p,
+.body-oscuro li,
+.body-oscuro dt,
+.body-oscuro dd,
+.body-oscuro .card-title,
+.body-oscuro .card-text {
+    color: var(--color-letra-modo-oscuro);
+}
+
+.body-oscuro strong {
+    color: var(--color-acento);
+}
+
+/* Cards en modo oscuro */
+
+.body-oscuro .tarjeta,
+.body-oscuro .lugar,
+.body-oscuro .card,
+.body-oscuro article,
+.body-oscuro dl {
+    background-color: var(--color-card-modo-oscuro);
+    color: var(--color-letra-modo-oscuro);
+}
+
+
+/* Tabla en modo oscuro */
+
+.body-oscuro table {
+    background-color: var(--color-fondo-modo-oscuro);
+    border-color: var(--color-borde-oscuro);
+}
+
+.body-oscuro th {
+    border-color: var(--color-borde-oscuro);
+    color: var(--color-letra-modo-oscuro);
+}
+
+.body-oscuro td {
+    border-color: var(--color-borde-oscuro);
+    color: var(--color-letra-modo-oscuro);
+}
+
+.body-oscuro tbody tr:nth-child(even) {
+    background-color: var(--color-tabla-par-oscuro);
+}
+
+.body-oscuro tbody tr:nth-child(odd) {
+    background-color: var(--color-fondo-modo-oscuro);
+}
+
+.body-oscuro tbody tr:hover {
+    background-color: var(--color-tabla-hover-oscuro);
+}
+
+/* Imagen modo oscuro */
+.body-oscuro img {
+    box-shadow: 0 4px 10px var(--color-sombra);
+}
+
 
 /* Header */
 header {
@@ -151,16 +165,18 @@ header div h1 {
 header button {
     background-color: #ff9100;
     color: black;
-    border: 1px solid black;
-    margin-left: 140px;
+    border: 3px solid #ffa733;
+    margin: 2rem;
+    margin-left: auto;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 20px;
-    padding: 5px;
+    font-size: 16px;
+    padding: 0.5rem;
 }
 
 header button:hover {
     background-color: var(--color-footer);
+    border: 3px solid #0a6657;
 }
 
 /* Nav y footer */
@@ -379,6 +395,19 @@ img:hover {
     object-fit: cover;
 }
 
+/* Imagenes en index.html y ciudad.html */
+
+#EventosDestacados img,
+#CascoHistórico img,
+#SobreLaCiudad img,
+article img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
 /* Imagenes de Lugares.html */
 
 #LugaresTuristicos img {
@@ -448,18 +477,6 @@ form button {
 
 form button:hover {
     background-color: #4d998a
-}
-
-/* Formulario mensaje*/
-
-.mensaje {
-    font-size: 1.2rem;
-    color: var(--color-header);
-    margin-top: 10px;
-}
-
-.mensaje-error {
-    color: red;
 }
 
 /* Card lugares de interés */
