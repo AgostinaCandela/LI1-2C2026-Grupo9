@@ -21,6 +21,7 @@
     --color-letra-modo-oscuro: #ffffff;
     --color-fondo-modo-claro: #f0f3f3;
     --color-card-modo-oscuro: #0b4238;
+    
 }
 
 /* Reset */
@@ -540,4 +541,14 @@ form button:hover {
     object-fit: cover;
     border-radius: 8px;
     position: relative;
+}
+
+#SobreLaCiudad table th:nth-child(1),
+#SobreLaCiudad table td:nth-child(1) {  
+    width: 30%;
+}
+
+#SobreLaCiudad table th:nth-child(2),
+#SobreLaCiudad table td:nth-child(2) {  
+    width: 70%;
 }
