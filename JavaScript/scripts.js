@@ -4,6 +4,7 @@ if (localStorage.getItem("modoOscuro") === "activo") {
     document.body.classList.add("body-oscuro");
 }
 
+<<<<<<< HEAD
 const btnCambio = document.getElementById("btn-cambio");
 
 if (document.body.classList.contains("body-oscuro")) {
@@ -12,6 +13,27 @@ if (document.body.classList.contains("body-oscuro")) {
     btnCambio.textContent = "Modo Oscuro 🌙";
 }
 
+btnCambio.addEventListener("click", () => {
+    document.body.classList.toggle("body-oscuro");
+=======
+const btnCambio = document.getElementById("btn-cambio"); {
+>>>>>>> 8b7c21efe55271ac81840ff7bfb2a4a572470852
+
+    if (document.body.classList.contains("body-oscuro")) {
+        btnCambio.textContent = "Modo Claro ☀️";
+        localStorage.setItem("modoOscuro", "activo");
+    } else {
+        btnCambio.textContent = "Modo Oscuro 🌙";
+        localStorage.setItem("modoOscuro", "inactivo");
+    }
+<<<<<<< HEAD
+});
+
+
+/* Validador de formulario */
+
+=======
+}
 btnCambio.addEventListener("click", () => {
     document.body.classList.toggle("body-oscuro");
 
@@ -23,10 +45,7 @@ btnCambio.addEventListener("click", () => {
         localStorage.setItem("modoOscuro", "inactivo");
     }
 });
-
-
-/* Validador de formulario */
-
+>>>>>>> 8b7c21efe55271ac81840ff7bfb2a4a572470852
 const formulario = document.getElementById("formulario");
 if (formulario) {
     formulario.addEventListener("submit", (e) => {
@@ -46,6 +65,7 @@ if (formulario) {
                 respuestaFormulario.className = "mensaje-error";
                 respuestaFormulario.textContent = "Error: Completa todos los campos obligatorios.";
             }
+<<<<<<< HEAD
         } else if (!email.includes("@")) {
             if (respuestaFormulario) {
                 respuestaFormulario.className = "mensaje-error";
@@ -60,3 +80,20 @@ if (formulario) {
         }
     });
 }
+=======
+        
+    } else if (!email.includes("@")) {
+        if (respuestaFormulario) {
+            respuestaFormulario.className = "mensaje-error";
+            respuestaFormulario.textContent = "Error: El correo electrónico no es válido.";
+        }
+    } else {
+        if (respuestaFormulario) {
+            respuestaFormulario.className = "mensaje-exito";
+            respuestaFormulario.textContent = "Formulario enviado con éxito.";
+        }
+        formulario.reset();
+    }
+});
+    }
+>>>>>>> 8b7c21efe55271ac81840ff7bfb2a4a572470852
