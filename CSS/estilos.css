@@ -22,6 +22,17 @@
     --color-fondo-modo-claro: #f0f3f3;
     --color-card-modo-oscuro: #0b4238;
     
+    --color-negro: #000000;
+    --color-borde-boton-hover:#0a6657;
+    --color-fondo-importante:#fbe392;
+    --color-sombra-tabla: rgba(0, 0, 0, 0.3);
+    --color-borde-tabla:#ccc;
+    --color-blanco:white;
+    --color-fila-par-claro:#f2f2f2;
+    --color-tabla-hover-claro:#d1e7dd;
+    --color-borde-form:#929191;
+    --color-boton-form-hover:#4d998a;
+    --color-sombra-lugar: rgba( 0, 0, 0, 0.1);
 }
 
 /* Reset */
@@ -165,7 +176,7 @@ header div h1 {
 
 header button {
     background-color: var(--color-hover);
-    color: black;
+    color: var(--color-negro);
     border: 3px solid var(--color-acento);
     margin: 2rem;
     margin-left: auto;
@@ -177,7 +188,7 @@ header button {
 
 header button:hover {
     background-color: var(--color-footer);
-    border: 3px solid #0a6657;
+    border: 3px solid var(--color-borde-boton-hover);
 }
 
 /* Nav y footer */
@@ -321,7 +332,7 @@ section li p {
 /* mark */
 
 #importante {
-    background-color: #fbe392;
+    background-color: var(--color-fondo-importante);
 }
 
 /* hr y dl */
@@ -437,12 +448,12 @@ table {
     margin: 18px 0;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 8px var(--color-sombra-tabla);
 }
 
 th,
 td {
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-borde-tabla);
     padding: 10px;
     text-align: left;
 
@@ -450,15 +461,15 @@ td {
 
 thead {
     background-color: var(--color-header);
-    color: white;
+    color: var(--color-blanco);
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: var(--color-fila-par-claro);
 }
 
 tbody tr:hover {
-    background-color: #d1e7dd;
+    background-color:var(--color-tabla-hover-claro);
     cursor: pointer;
 }
 
@@ -476,14 +487,14 @@ form select {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
-    border: 1px solid #929191;
+    border: 1px solid var(--color-borde-form);
     border-radius: 5px;
     box-sizing: border-box;
 }
 
 form button {
     background-color: var(--color-header);
-    color: white;
+    color: var(--color-blanco);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -491,7 +502,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #4d998a
+    background-color: var(--color-boton-form-hover);
 }
 
 /* Card lugares de interés */
@@ -528,7 +539,7 @@ form button:hover {
     background: white;
     border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px var(--color-sombra-lugar);
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -551,4 +562,4 @@ form button:hover {
 #SobreLaCiudad table th:nth-child(2),
 #SobreLaCiudad table td:nth-child(2) {  
     width: 70%;
-}
+} 
